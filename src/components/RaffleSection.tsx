@@ -111,7 +111,7 @@ const RaffleSection = () => {
                       <h4 className="text-lg font-semibold text-foreground">
                         {winner.name}
                       </h4>
-                      <p className="text-primary font-medium">{winner.prize}</p>
+                      <p className="text-muted-foreground mb-6">{winner.prize}</p>
                     </div>
                     <div className="text-right">
                       <p className="text-sm text-muted-foreground">{winner.month}</p>
