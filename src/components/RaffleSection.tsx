@@ -21,9 +21,9 @@ const RaffleSection = () => {
   ];
 
   const recentWinners = [
-    { name: 'Aguardando Ganhador', prize: 'Cat Café Pass', month: 'Junho 2025' },
-    { name: 'Aguardando Ganhador', prize: 'Cake Collection', month: 'Junho 2025' },
-    { name: 'Aguardando Ganhador', prize: 'Coffee Bundle', month: 'Junho 2025' }
+    { name: 'Aguardando Ganhador', prize: 'Número da Rifa', month: 'Junho 2025' },
+    { name: 'Aguardando Ganhador', prize: 'Número da Rifa', month: 'Junho 2025' },
+    { name: 'Aguardando Ganhador', prize: 'Número da Rifa', month: 'Junho 2025' }
     
   ];
 
