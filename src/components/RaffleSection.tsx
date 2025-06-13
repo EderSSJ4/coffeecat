@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 
 const RaffleSection = () => {
   const currentPrizes = [
@@ -20,12 +19,25 @@ const RaffleSection = () => {
     }
   ];
 
-  const recentWinners = [
+  const [recentWinners, setRecentWinners] = useState([
     { name: 'Aguardando Ganhador', prize: 'Número da Rifa', month: 'Junho 2025' },
     { name: 'Aguardando Ganhador', prize: 'Número da Rifa', month: 'Junho 2025' },
     { name: 'Aguardando Ganhador', prize: 'Número da Rifa', month: 'Junho 2025' }
-    
-  ];
+  ]);
+
+  const sortearNumeros = () => {
+    const numerosSorteados = new Set();
+    while (numerosSorteados.size < 3) {
+      const numero = Math.floor(Math.random() * 200) + 1;
+      numerosSorteados.add(numero);
+    }
+    const vencedores = Array.from(numerosSorteados).map((numero, i) => ({
+      name: `Ganhador nº ${numero}`,
+      prize: currentPrizes[i]?.title || 'Prêmio Surpresa',
+      month: 'Junho 2025'
+    }));
+    setRecentWinners(vencedores);
+  };
 
   return (
     <section id="raffle" className="py-20 bg-gradient-warm">
@@ -62,7 +74,6 @@ const RaffleSection = () => {
                       {prize.title}
                     </h4>
                     <p className="text-muted-foreground mb-2">{prize.description}</p>
-                    <span className="text-primary font-bold text-lg">Value: {prize.value}</span>
                   </div>
                 </div>
               ))}
@@ -75,6 +86,12 @@ const RaffleSection = () => {
                 <li>• Todo valor será convertido para ajudar no nosso projeto escolar</li>
                 <li>• Os ganhadores terão seu nome aqui divulgados</li>
               </ul>
+              <button
+                onClick={sortearNumeros}
+                className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-full font-semibold transition-all duration-300"
+              >
+                Sortear agora 🎲
+              </button>
             </div>
           </div>
 
