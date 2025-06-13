@@ -20,9 +20,9 @@ const RaffleSection = () => {
   ];
 
   const [recentWinners, setRecentWinners] = useState([
-    { name: 'Aguardando Ganhador', prize: 'Número da Rifa', month: 'Junho 2025' },
-    { name: 'Aguardando Ganhador', prize: 'Número da Rifa', month: 'Junho 2025' },
-    { name: 'Aguardando Ganhador', prize: 'Número da Rifa', month: 'Junho 2025' }
+    { name: 'Vanessa Botelho', prize: '031', month: 'Junho 2025' },
+    { name: 'Ketleym Aparecida', prize: '197', month: 'Junho 2025' },
+    { name: 'Stela Carvalo', prize: '124', month: 'Junho 2025' }
   ]);
 
   const sortearNumeros = () => {
@@ -86,12 +86,7 @@ const RaffleSection = () => {
                 <li>• Todo valor será convertido para ajudar no nosso projeto escolar</li>
                 <li>• Os ganhadores terão seu nome aqui divulgados</li>
               </ul>
-              <button
-                onClick={sortearNumeros}
-                className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-full font-semibold transition-all duration-300"
-              >
-                Sortear agora 🎲
-              </button>
+              
             </div>
           </div>
 

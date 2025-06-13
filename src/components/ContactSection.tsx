@@ -78,7 +78,7 @@ const ContactSection = () => {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/coffee.cat_0?igsh=MTMwM3I3ZjY3NHA1NQ=="
                   className="flex items-center justify-center space-x-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-3 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
                 >
                   <span>📷</span>
