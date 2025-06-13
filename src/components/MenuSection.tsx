@@ -12,25 +12,25 @@ const MenuSection = () => {
         {
           name:'Bolos',
           description: 'Bolo de cenoura delicioso. Adeus dieta!',
-          price: '$8.50',
+          price: 'R$',
           image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
         },
         {
           name: 'Pizzas',
           description: 'Mini pizzas muito saborosas',
-          price: '$7.25',
+          price: 'R$2,50 +-',
           image: 'https://as2.ftcdn.net/v2/jpg/06/42/04/25/1000_F_642042597_mPgIh2MRe9el3876AOguiMB0n7gHwqpE.jpg'
         },
         {
           name: 'Pudim',
           description: 'Ah! Eu amo um Pudim!',
-          price: '$9.00',
+          price: 'R$8,00',
           image: 'https://as1.ftcdn.net/v2/jpg/05/74/69/60/1000_F_574696092_7N3HZQKEVr2AHWl9oPohNgbpPZo0AutP.jpg'
         },
         {
           name: 'Pão de Queijos',
           description: 'O melhor pão de queijo do Brasil!',
-          price: '$7.75',
+          price: 'R$7,00',
           image: 'https://as1.ftcdn.net/v2/jpg/03/92/06/28/1000_F_392062854_gYUpQ18ZTR22mbEH8ddr6depgvAm2XaZ.jpg'
         }
       ]
@@ -49,13 +49,13 @@ const MenuSection = () => {
         {
           name: 'Café',
           description: 'Aquele cafézinho, como é bom!',
-          price: '$3.75',
+          price: 'R$2,00',
           image: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
         },
         {
           name: 'Suco de Laranja',
           description: 'Como eu Amo Suco de Laranja',
-          price: '$4.25',
+          price: 'R$',
           image: 'https://as1.ftcdn.net/v2/jpg/00/82/63/32/1000_F_82633218_O7UXYKOVTuzDHEZo1DQLL9k5kPwlRcXg.jpg'
         }
       ]

@@ -6,19 +6,16 @@ const RaffleSection = () => {
     {
       title: 'Cesta Papelaria Patinho Fofo',
       description: '',
-      value: '$150',
       image: 'https://as1.ftcdn.net/v2/jpg/00/34/70/32/1000_F_34703220_TiczZRk73LnvUcvt2J2qj57mKzwKAtBT.jpg'
     },
     {
       title: '2 Vouchers para o Mundo Jump',
       description: '',
-      value: '$75',
       image: 'https://as1.ftcdn.net/v2/jpg/04/33/44/50/1000_F_433445033_XxUXTEqvJf7hgONVsZYx1zz3YyiMoZwB.jpg'
     },
     {
       title: 'Um voucher para Hotel Aero Inn',
       description: '',
-      value: '$120',
       image: 'https://as1.ftcdn.net/v2/jpg/00/29/13/38/1000_F_29133877_bfA2n7cWV53fto2BomyZ6pyRujJTBwjd.jpg'
     }
   ];
