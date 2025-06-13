@@ -1,0 +1,198 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 253 245 238; /* Warm cream background */
+    --foreground: 76 56 42; /* Dark brown text */
+
+    --card: 255 250 245; /* Light cream for cards */
+    --card-foreground: 76 56 42;
+
+    --popover: 255 250 245;
+    --popover-foreground: 76 56 42;
+
+    --primary: 205 144 119; /* Caramel brown */
+    --primary-foreground: 255 250 245;
+
+    --secondary: 244 211 198; /* Light pink */
+    --secondary-foreground: 76 56 42;
+
+    --muted: 240 229 218; /* Soft beige */
+    --muted-foreground: 120 98 84;
+
+    --accent: 248 183 165; /* Warm pink accent */
+    --accent-foreground: 76 56 42;
+
+    --destructive: 220 38 38;
+    --destructive-foreground: 255 250 245;
+
+    --border: 240 229 218;
+    --input: 240 229 218;
+    --ring: 205 144 119;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 255 250 245;
+    --sidebar-foreground: 76 56 42;
+    --sidebar-primary: 205 144 119;
+    --sidebar-primary-foreground: 255 250 245;
+    --sidebar-accent: 244 211 198;
+    --sidebar-accent-foreground: 76 56 42;
+    --sidebar-border: 240 229 218;
+    --sidebar-ring: 205 144 119;
+
+    /* Cat-themed gradients */
+    --gradient-warm: linear-gradient(135deg, rgb(253 245 238) 0%, rgb(248 183 165) 100%);
+    --gradient-soft: linear-gradient(45deg, rgb(244 211 198) 0%, rgb(240 229 218) 100%);
+  }
+
+  .dark {
+    --background: 45 35 25;
+    --foreground: 253 245 238;
+
+    --card: 45 35 25;
+    --card-foreground: 253 245 238;
+
+    --popover: 45 35 25;
+    --popover-foreground: 253 245 238;
+
+    --primary: 248 183 165;
+    --primary-foreground: 45 35 25;
+
+    --secondary: 76 56 42;
+    --secondary-foreground: 253 245 238;
+
+    --muted: 76 56 42;
+    --muted-foreground: 205 144 119;
+
+    --accent: 205 144 119;
+    --accent-foreground: 253 245 238;
+
+    --destructive: 220 38 38;
+    --destructive-foreground: 253 245 238;
+
+    --border: 76 56 42;
+    --input: 76 56 42;
+    --ring: 248 183 165;
+
+    --sidebar-background: 45 35 25;
+    --sidebar-foreground: 253 245 238;
+    --sidebar-primary: 248 183 165;
+    --sidebar-primary-foreground: 45 35 25;
+    --sidebar-accent: 76 56 42;
+    --sidebar-accent-foreground: 253 245 238;
+    --sidebar-border: 76 56 42;
+    --sidebar-ring: 248 183 165;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-quicksand;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(248, 183, 165, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(244, 211, 198, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(240, 229, 218, 0.1) 0%, transparent 50%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .cat-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f4d3c6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .gradient-soft {
+    background: var(--gradient-soft);
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(205, 144, 119, 0.15);
+  }
+
+  .nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background: rgb(205, 144, 119);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .carousel-item {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.8s ease-in-out;
+  }
+
+  .carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .menu-item {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .menu-item:hover {
+    border-color: rgb(205, 144, 119);
+    background: rgb(255, 250, 245);
+    transform: translateY(-2px);
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes purr {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+
+  .purr-animation {
+    animation: purr 2s ease-in-out infinite;
+  }
+}
